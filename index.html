@@ -1,38 +1,154 @@
 <html>
 
+
+
+
 <head>
-  <link rel="stylesheet" href="style.css">
+
+<style media="screen" type="text/css">
+
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+  .left {
+    background-color: lightgrey;
+    float: left;
+    width: 300px;
+    padding: 25px;
+    margin: 25px;
+    position: absolute;
+  }
+
+  .enlarge-onhover {
+       width: 250px;
+       height: 228px;
+  }
+
+  .enlarge-onhover:hover {
+       width: 450px;
+       height: 428px;
+       z-index: 2;
+  }
+
+
+
+</style>
+
+
 </head>
 
 
 
-<body>
-<img src="https://www.pixelstalk.net/wp-content/uploads/2016/04/Space-stars-HD-wallpaper.jpg" style="width:1920px;height:1200px;">
- 
-  <div id="sidebar1">
-    <h1> Likes/Dislikes </h1>
+<body background="https://www.pixelstalk.net/wp-content/uploads/2016/04/Space-stars-HD-wallpaper.jpg">
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">Projects</a>
+    <a href="#">Contact</a>
   </div>
 
-  <div id="main">
-    <!-- main page content goes in here -->
-    <p>My first paragraph.</p>
+  <div class="left"; style="background-color:black;color:white;padding:20px;top:50px; left: 45px;">
+    <h1>Kyna's Portfolio</h1>
+    </div>
 
-  </div>
 
-  <div id="sidebar2">
-    <h2> Biography </h2>
-    <p>My first paragraph.</p>
-  </div>
- 
-  <div style="background-color:black;color:white;padding:20px;">
-  <h2>Kyna's Portfolio</h2>
-    
-</div> 
-      
-  
+
+    <span style="color:white;font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+
+
+
+  <script>
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+
+  </script>
+
+
+    <div  style="top:190px; left:40px;" class="left"; id="sidebar2">
+    <img src="profile.jpg" alt="Profile Photo" style="width:250px;height:228px;">
+    <h2>Biography</h2>
+      <p>My name is Kyna Eagar, I am 17 years old from Somerset, NJ.</p>
+    </div>
+
+
+        <div style="top:610px; left:40px;" class="left"; id="sidebar1">
+          <h2>Likes</h2>
+            <p>Listening and playing music, baking, cooking, The Shadowhunter world, Netflix</p>
+          <h2>Fun Facts!</h1>
+            <p> I have been playing the violin for over 7 years now, I love cheesecake!, I play field Hockey, My favortie color is purple </p>
+          </div>
+
+
+          <div style="left:450px;" class="left"; id="sidebar1">
+              <h2>Obamicon Project</h1>
+                <img style="z-index:6;" class="enlarge-onhover" src="recolor.jpg">
+                <img class="enlarge-onhover" src="recolored.jpg">
+              <p> Recolored using python at Girls Who Code SIP </p>
+            </div>
+
+
+            <div style="left:870px;" class="left"; id="sidebar1">
+                <h2>Text Adventure Project</h1>
+                  <img style="z-index:-1;" class="enlarge-onhover" src="text.png">
+                <p> Created a "Choose Your Own Story" walkthrough using Python and Command Prompt </p>
+              </div>
+
+
+              <div style="left:870px; top:510px;" class="left"; id="sidebar1">
+                  <h2>Scrolling Game Project</h1>
+                    <img class="enlarge-onhover" src="romeojuliet.png">
+                  <p>(Made with Scratch) A game where the background appears to be moving as you help Juliet jump over rocks and collect her ingredients to make her special potion to be with her prince. </p>
+                </div>
+
+
 </body>
 
 
 
 </html>
-
